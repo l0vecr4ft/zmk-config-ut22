@@ -3,12 +3,16 @@ manifest:
     # zmk official
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: Nicell
-      url-base: https://github.com/Nicell
+    # nice-view-gem
+    - name: m165437
+      url-base: https://github.com/M165437
   projects:
     - name: zmk
-      remote: Nicell
-      revision: nice-view-custom-screen
+      remote: zmkfirmware
+      revision: v0.3.0
       import: app/west.yml
+    - name: nice-view-gem
+      remote: m165437
+      revision: main
   self:
     path: config
